@@ -8,11 +8,22 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    phone_number: Number,
-    email_address: String,
-    level_of_education: String,
+    phone_number:{
+        type: Number,
+        required: true,
+        unique: true
+    },
+    email_address: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    level_of_education: {
+        type:String,
+        required:true
+    },
     location: String,
     interest: String
 })
 
-module.exports("user", userSchema);
+module.exports = mongoose.model("user", userSchema);
