@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //Connect to the mongoose database
-mongoose.connect("mongodb+srv://andrew:Kimani@cluster0.hbs3wtk.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://andrew:Kimani@cluster0.hbs3wtk.mongodb.net/hfc-e-hub?retryWrites=true&w=majority")
     .then(() => {
         console.log("Server opened!!");
     })
