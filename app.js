@@ -40,10 +40,15 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", async (req, res) => {
-    //This is the method to post the new user
-    console.log(req.body);
-    const new_user = await new User(req.body);
-    await new_user.save();
+    try {
+        //This is the method to post the new user
+        console.log(req.body);
+        const new_user = await new User(req.body);
+        await new_user.save();
+    } catch (error) {
+        console.log(error)
+    }
+
 })
 
 app.listen(PORT, () => {
