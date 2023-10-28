@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express();
-const PORT = 5501;
+const PORT = process.env.PORT || 5501;
 const path = require("path");
 const ejsMate = require("ejs-mate");
 const mongoose = require("mongoose");
